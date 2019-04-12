@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  family: MyString
+  range: MyString
+  typical_seating: 1
+  overall_length: MyString
+  img_length: MyString
+  img_height: MyString
+  img_wing_span: MyString
+
+two:
+  name: MyString
+  family: MyString
+  range: MyString
+  typical_seating: 1
+  overall_length: MyString
+  img_length: MyString
+  img_height: MyString
+  img_wing_span: MyString

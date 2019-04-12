@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript" src="index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <div class="sidebar-header"><h3>Aviation World</h3></div>
+
+        <ul class="list-unstyled components plane-list">
+          <p>Catalog</p>
+          <!-- <li class="active"> -->
+          <li>
+            <a
+              href="#homeSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Airbus</a
+            >
+            <ul class="collapse list-unstyled" id="homeSubmenu"></ul>
+          </li>
+          <li>
+            <a
+              href="#BoeingSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >Boeing</a
+            >
+            <ul class="collapse list-unstyled" id="BoeingSubmenu">
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="#newPlaneSubmenu"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="dropdown-toggle"
+              >New Airplanes</a
+            >
+            <ul class="collapse list-unstyled" id="newPlaneSubmenu"></ul>
+          </li>
+          <li><a href="#">Portfolio</a></li>
+          <li>
+            <a
+              href="#"
+              data-toggle="modal"
+              id="addPlane"
+              data-target="#exampleModal"
+              >Add Plane</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div id="content">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+              <i class="fas fa-align-left"></i> <span>Toggle Sidebar</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              id="first-slide"
+              class="d-block w-100"
+              src="https://airbus-h.assetsadobe2.com/is/image/content/dam/channel-specific/website-/products-and-services/aircraft/aircraft_specifications/passengers/A318_T.png?wid=1000&amp;fit=constrain,1&amp;fmt=png-alpha"
+              alt="First slide"
+            />
+            <!--
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p>...</p>
+              </div>
+            -->
+          </div>
+          <div class="carousel-item">
+            <img
+              id="second-slide"
+              class="d-block w-100"
+              src="https://airbus-h.assetsadobe2.com/is/image/content/dam/channel-specific/website-/products-and-services/aircraft/aircraft_specifications/passengers/A318_R.png?wid=1000&amp;fit=constrain,1&amp;fmt=png-alpha"
+              alt="Second slide"
+            />
+
+            <div class="carousel-caption d-none d-md-block">
+              <h5 id="planeName">...</h5>
+              <p>...</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              id="third-slide"
+              class="d-block w-100"
+              src="https://airbus-h.assetsadobe2.com/is/image/content/dam/channel-specific/website-/products-and-services/aircraft/aircraft_specifications/passengers/A318_F.png?wid=1000&amp;fit=constrain,1&amp;fmt=png-alpha"
+              alt="Third slide"
+            />
+            <!--
+              <div class="carousel-caption d-none d-md-block">
+                <h5>...</h5>
+                <p>...</p>
+              </div>
+            -->
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Airplane</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="addPlaneForm">
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Name</label>
+                <input type="text" class="form-control" id="addPlaneName" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Manufacture</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="addPlaneManufacture"
+                />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Family</label
+                >
+                <input type="text" class="form-control" id="addPlaneFamily" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Range</label>
+                <input type="text" class="form-control" id="addPlaneRange" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Typical Seating</label
+                >
+                <input type="text" class="form-control" id="addPlaneSeating" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Overall Length</label
+                >
+                <input type="text" class="form-control" id="addPlaneLength" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Height</label
+                >
+                <input type="text" class="form-control" id="addPlaneHeight" />
+              </div>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label"
+                  >Wing Span</label
+                >
+                <input type="text" class="form-control" id="addPlaneSpan" />
+              </div>
+              <!--
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label"
+                    >Message:</label
+                  >
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
